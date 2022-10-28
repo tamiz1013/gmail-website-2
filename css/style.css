@@ -1,3 +1,6 @@
+body {
+  margin: 0px auto;
+}
 .header {
   display: grid;
   grid-template-columns: 1fr 9fr;
@@ -27,14 +30,23 @@
   display: inline-block;
   padding: 5px;
   background: rgb(0, 0, 0);
-  border-radius: 8px;
+  border-radius: 3px;
 }
 .menu ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 35px;
+  width: 120px;
   text-decoration: none;
-  font-size: 180%;
+  font-size: 150%;
   color: white;
   border: 2px solid #8f8d89;
   border-radius: 3px;
+}
+#contact-us {
+  width: 150px;
 }
 
 /* responsive */
@@ -61,6 +73,7 @@
   }
 
   .menu ul li a {
+    padding: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,7 +81,7 @@
     width: 125px;
     background: black;
     border: 2px solid #8f8d89;
-    border-radius: 10px;
+    border-radius: 3px;
   }
 }
 /* small device */
@@ -76,5 +89,8 @@
 @media screen and (max-width: 640px) {
   .menu ul {
     grid-template-columns: 1fr 1fr;
+  }
+  #contact-us {
+    width: 125px;
   }
 }
