@@ -48,7 +48,7 @@
   .menu ul {
     padding: 0px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .menu ul li {
     font-size: 70%;
@@ -60,6 +60,6 @@
     margin-top: 5px;
   }
   .menu ul li a {
-    font-size: 150%;
+    font-size: 300%;
   }
 }
