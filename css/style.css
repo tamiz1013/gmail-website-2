@@ -52,14 +52,18 @@
   }
   .menu ul li {
     font-size: 70%;
-    border: 2px solid orange;
-    margin: 10px 20px 0px 20px;
+    margin: 0px 10px 0px 10px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    margin-top: 5px;
+    background: none;
   }
+
   .menu ul li a {
-    font-size: 200%;
+    font-size: 180%;
+    background: black;
+    padding: 5px;
+    border: 2px solid #8f8d89;
+    border-radius: 10px;
   }
 }
