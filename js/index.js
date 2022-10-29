@@ -22,7 +22,28 @@ minusBtn[0].addEventListener('click', ()=>{
     }
 })
 freshGmail.addEventListener('click',()=>{
-    freshGmailAmount.innerHTML=freshGmailQuantity*freshGmailPrice;
+    freshGmailAmount.innerHTML= parseInt(freshGmailQuantity*freshGmailPrice);
+    
+})
+
+const appPasswordGmail = document.querySelector(".app-password-gmail");
+const appPasswordGmailAmount = document.querySelector(".app-password-gmail .amount");
+const appPasswordGmailPrice = 0.17;
+let   appPasswordGmailQuantity=100;
+plusBtn[1].addEventListener('click', ()=>{
+    appPasswordGmailQuantity+=100;
+    gmailQuantity[1].innerHTML= appPasswordGmailQuantity;
+    
+})
+minusBtn[1].addEventListener('click', ()=>{
+    if(appPasswordGmailQuantity>100){
+        appPasswordGmailQuantity-=100;
+        gmailQuantity[1].innerHTML= appPasswordGmailQuantity;
+        
+    }
+})
+appPasswordGmail.addEventListener('click',()=>{
+    appPasswordGmailAmount.innerHTML=parseInt(appPasswordGmailPrice*appPasswordGmailQuantity);
     
 })
 
@@ -31,15 +52,15 @@ const iphoneGmailAmount = document.querySelector(".iphone-gmail .amount");
 const iphoneGmailPrice = 0.50;
 let iphoneGmailQuantity = 100;
 
-plusBtn[1].addEventListener('click', ()=>{
+plusBtn[2].addEventListener('click', ()=>{
     iphoneGmailQuantity+=100;
-    gmailQuantity[1].innerHTML= iphoneGmailQuantity;
+    gmailQuantity[2].innerHTML= iphoneGmailQuantity;
     
 })
-minusBtn[1].addEventListener('click', ()=>{
+minusBtn[2].addEventListener('click', ()=>{
     if(iphoneGmailQuantity>100){
         iphoneGmailQuantity-=100;
-        gmailQuantity[1].innerHTML= iphoneGmailQuantity;
+        gmailQuantity[2].innerHTML= iphoneGmailQuantity;
         
     }
 })
@@ -54,15 +75,15 @@ const gmail2021Amount = document.querySelector(".gmail-2021 .amount");
 const gmailPrice2021 = 0.35;
 let gmail2021Quantity = 100;
 
-plusBtn[2].addEventListener('click', ()=>{
+plusBtn[3].addEventListener('click', ()=>{
     gmail2021Quantity+=100;
-    gmailQuantity[2].innerHTML= gmail2021Quantity;
+    gmailQuantity[3].innerHTML= gmail2021Quantity;
     
 })
-minusBtn[2].addEventListener('click', ()=>{
+minusBtn[3].addEventListener('click', ()=>{
     if(gmail2021Quantity>100){
         gmail2021Quantity-=100;
-        gmailQuantity[2].innerHTML= gmail2021Quantity;
+        gmailQuantity[3].innerHTML= gmail2021Quantity;
         
     }
 })
@@ -78,15 +99,15 @@ const gmail2020Amount = document.querySelector(".gmail-2020 .amount");
 const gmailPrice2020 = 0.38;
 let gmail2020Quantity = 100;
 
-plusBtn[3].addEventListener('click', ()=>{
+plusBtn[4].addEventListener('click', ()=>{
     gmail2020Quantity+=100;
-    gmailQuantity[3].innerHTML= gmail2020Quantity;
+    gmailQuantity[4].innerHTML= gmail2020Quantity;
     
 })
-minusBtn[3].addEventListener('click', ()=>{
+minusBtn[4].addEventListener('click', ()=>{
     if(gmail2020Quantity>100){
         gmail2020Quantity-=100;
-        gmailQuantity[3].innerHTML= gmail2020Quantity;
+        gmailQuantity[4].innerHTML= gmail2020Quantity;
         
     }
 })
@@ -102,15 +123,15 @@ const gmail2018Amount = document.querySelector(".gmail-2018 .amount");
 const gmailPrice2018 = 0.40;
 let gmail2018Quantity = 100;
 
-plusBtn[4].addEventListener('click', ()=>{
+plusBtn[5].addEventListener('click', ()=>{
     gmail2018Quantity+=100;
-    gmailQuantity[4].innerHTML= gmail2018Quantity;
+    gmailQuantity[5].innerHTML= gmail2018Quantity;
     
 })
-minusBtn[4].addEventListener('click', ()=>{
+minusBtn[5].addEventListener('click', ()=>{
     if(gmail2018Quantity>100){
         gmail2018Quantity-=100;
-        gmailQuantity[4].innerHTML= gmail2018Quantity;
+        gmailQuantity[5].innerHTML= gmail2018Quantity;
         
     }
 })
@@ -125,15 +146,15 @@ const gmail2016Amount = document.querySelector(".gmail-2016 .amount");
 const gmailPrice2016 = 0.45;
 let gmail2016Quantity = 100;
 
-plusBtn[5].addEventListener('click', ()=>{
+plusBtn[6].addEventListener('click', ()=>{
     gmail2016Quantity+=100;
-    gmailQuantity[5].innerHTML= gmail2016Quantity;
+    gmailQuantity[6].innerHTML= gmail2016Quantity;
     
 })
-minusBtn[5].addEventListener('click', ()=>{
+minusBtn[6].addEventListener('click', ()=>{
     if(gmail2016Quantity>100){
         gmail2016Quantity-=100;
-        gmailQuantity[5].innerHTML= gmail2016Quantity;
+        gmailQuantity[6].innerHTML= gmail2016Quantity;
         
     }
 })
@@ -147,15 +168,15 @@ const gmail2014Amount = document.querySelector(".gmail-2014 .amount");
 const gmailPrice2014 = 0.60;
 let gmail2014Quantity = 100;
 
-plusBtn[6].addEventListener('click', ()=>{
+plusBtn[7].addEventListener('click', ()=>{
     gmail2014Quantity+=100;
-    gmailQuantity[6].innerHTML= gmail2014Quantity;
+    gmailQuantity[7].innerHTML= gmail2014Quantity;
     
 })
-minusBtn[6].addEventListener('click', ()=>{
+minusBtn[7].addEventListener('click', ()=>{
     if(gmail2014Quantity>100){
         gmail2014Quantity-=100;
-        gmailQuantity[6].innerHTML= gmail2014Quantity;
+        gmailQuantity[7].innerHTML= gmail2014Quantity;
         
     }
 })
@@ -169,15 +190,15 @@ const gmail2010Amount = document.querySelector(".gmail-2010 .amount");
 const gmailPrice2010 = 1;
 let gmail2010Quantity = 100;
 
-plusBtn[7].addEventListener('click', ()=>{
+plusBtn[8].addEventListener('click', ()=>{
     gmail2010Quantity+=100;
-    gmailQuantity[7].innerHTML= gmail2010Quantity;
+    gmailQuantity[8].innerHTML= gmail2010Quantity;
     
 })
-minusBtn[7].addEventListener('click', ()=>{
+minusBtn[8].addEventListener('click', ()=>{
     if(gmail2010Quantity>100){
         gmail2010Quantity-=100;
-        gmailQuantity[7].innerHTML= gmail2010Quantity;
+        gmailQuantity[8].innerHTML= gmail2010Quantity;
         
     }
 })
@@ -191,15 +212,15 @@ const gmail2008Amount = document.querySelector(".gmail-2008 .amount");
 const gmailPrice2008 = 2;
 let gmail2008Quantity = 100;
 
-plusBtn[8].addEventListener('click', ()=>{
+plusBtn[9].addEventListener('click', ()=>{
     gmail2008Quantity+=100;
-    gmailQuantity[8].innerHTML= gmail2008Quantity;
+    gmailQuantity[9].innerHTML= gmail2008Quantity;
     
 })
-minusBtn[8].addEventListener('click', ()=>{
+minusBtn[9].addEventListener('click', ()=>{
     if(gmail2008Quantity>100){
         gmail2008Quantity-=100;
-        gmailQuantity[8].innerHTML= gmail2008Quantity;
+        gmailQuantity[9].innerHTML= gmail2008Quantity;
         
     }
 })
@@ -207,7 +228,3 @@ gmail2008.addEventListener('click',()=>{
     gmail2008Amount.innerHTML=gmailPrice2008*gmail2008Quantity;
     
 })
-
-
-
-    
