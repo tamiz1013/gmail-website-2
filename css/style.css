@@ -58,7 +58,7 @@ body {
 
 .content {
   display: grid;
-  grid-template-columns: 4fr 3fr 4fr 4fr 2fr;
+  grid-template-columns: 4fr 3fr 6fr 4fr 2fr;
   align-items: center;
   justify-content: end;
   background: rgb(26 25 25);
@@ -83,6 +83,42 @@ p {
   color: white;
   padding: 5px;
   border-radius: 10px;
+}
+.quantity {
+  background: rgb(26 25 25);
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+.select-gmail-quantity {
+  border: 2px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: rgb(26 25 25);
+}
+.select-gmail-quantity > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minus {
+  border: 1px dashed orange;
+  background: rgb(26 25 25);
+  font-size: 350%;
+  padding-bottom: 7px;
+  cursor: pointer;
+}
+.gmail-quantity {
+  background: white;
+  color: black;
+  font-size: 200%;
+  font-weight: 700;
+}
+.plus {
+  border: 1px dashed orange;
+  background: rgb(26 25 25);
+  font-size: 350%;
+  cursor: pointer;
 }
 
 /* responsive */
