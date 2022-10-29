@@ -1,3 +1,6 @@
+* {
+  background: black;
+}
 body {
   margin: 0px auto;
 }
@@ -49,10 +52,43 @@ body {
   width: 150px;
 }
 
-/* responsive */
-/* medium device */
+/*--------------
+     body css 
+---------------*/
 
-@media screen and (max-width: 868px) {
+.content {
+  display: grid;
+  grid-template-columns: 4fr 3fr 4fr 4fr 2fr;
+  align-items: center;
+  justify-content: end;
+  background: rgb(26 25 25);
+  color: white;
+  margin: 15px 0px 15px 0px;
+  border: 2px solid #a19277;
+  border-radius: 5px;
+}
+.content h1,
+p {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  background: rgb(26 25 25);
+}
+
+.buy a {
+  text-decoration: none;
+  background: red;
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/* responsive */
+/* small device */
+
+@media screen and (max-width: 896px) {
   .header {
     display: grid;
     grid-template-columns: 1fr;
@@ -83,6 +119,21 @@ body {
     border: 2px solid #8f8d89;
     border-radius: 3px;
   }
+  /* ---------------------------
+  container responsive css
+  ------------------------------- */
+  .content {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 2fr;
+  }
+  .content h1,
+  p {
+    justify-content: left;
+    font-size: 130%;
+  }
+  .gmail-description {
+    display: none;
+  }
 }
 /* small device */
 
@@ -92,5 +143,20 @@ body {
   }
   #contact-us {
     width: 125px;
+  }
+  /* ---------------------------
+  container responsive css
+  ------------------------------- */
+  .content {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr 2fr;
+  }
+  .content h1,
+  p {
+    justify-content: left;
+    font-size: 100%;
+  }
+  .gmail-description {
+    display: none;
   }
 }
