@@ -1,0 +1,32 @@
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.skype-contact > a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  background: orange;
+  border-radius: 10px;
+}
+.telegram-contact > a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  background: orange;
+  border-radius: 10px;
+}
+.facebook-contact > a {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  background: orange;
+  border-radius: 10px;
+}

@@ -63,7 +63,7 @@ body {
   justify-content: end;
   background: rgb(26 25 25);
   color: white;
-  margin: 15px 0px 15px 0px;
+  margin: 15px 2px 15px 2px;
   border: 2px solid #a19277;
   border-radius: 5px;
 }
@@ -119,6 +119,9 @@ p {
   background: rgb(26 25 25);
   font-size: 350%;
   cursor: pointer;
+}
+.amount {
+  background: rgb(26 25 25);
 }
 
 /* responsive */
