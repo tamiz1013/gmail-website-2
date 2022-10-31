@@ -10,6 +10,7 @@ const freshGmailAmount = document.querySelector(".fresh-gmail .amount");
 const freshGmailPrice = 0.15;
 let freshGmailQuantity=100;
 gmailQuantity[0].innerHTML= freshGmailQuantity;
+
 freshGmailAmount.innerHTML= parseInt(freshGmailQuantity*freshGmailPrice);
 plusBtn[0].addEventListener('click', ()=>{
     if(freshGmailQuantity<5000){
@@ -24,7 +25,6 @@ plusBtn[0].addEventListener('click', ()=>{
         }
         
     }
-    
     
 })
 minusBtn[0].addEventListener('click', ()=>{
@@ -42,7 +42,6 @@ minusBtn[0].addEventListener('click', ()=>{
 })
 freshGmail.addEventListener('click',()=>{
     freshGmailAmount.innerHTML= parseInt(freshGmailQuantity*freshGmailPrice);
-    
 })
 
 // google voice part  
@@ -173,20 +172,36 @@ const gmailPrice2021 = 0.35;
 let gmail2021Quantity = 100;
 gmailQuantity[4].innerHTML= gmail2021Quantity;
 gmail2021Amount.innerHTML= parseInt(gmailPrice2021*gmail2021Quantity);
+
 plusBtn[4].addEventListener('click', ()=>{
-    if(gmail2021Quantity<2000){
-        gmail2021Quantity+=100;
-        gmailQuantity[4].innerHTML= gmail2021Quantity;
+    
+    if( gmail2021Quantity < 5000 ){
+        if( gmail2021Quantity < 500 ){
+            gmail2021Quantity = 500 ;
+            gmailQuantity[4].innerHTML = gmail2021Quantity;
+        }else if( gmail2021Quantity >= 500 ){
+            gmail2021Quantity += 500 ;
+            gmailQuantity[4].innerHTML = gmail2021Quantity;
+        }else{
+
+        }
+        
     }
 
     
 })
 minusBtn[4].addEventListener('click', ()=>{
-    if(gmail2021Quantity>100){
-        gmail2021Quantity-=100;
-        gmailQuantity[4].innerHTML= gmail2021Quantity;
-        
+    if( gmail2021Quantity > 100 ){
+        if( gmail2021Quantity <= 500 ){
+            gmail2021Quantity -= 100;
+            gmailQuantity[4].innerHTML = gmail2021Quantity; 
+        }
+        if( gmail2021Quantity >= 1000){
+            gmail2021Quantity -= 500;
+            gmailQuantity[4].innerHTML = gmail2021Quantity;
+        }
     }
+
 })
 gmail2021.addEventListener('click',()=>{
     gmail2021Amount.innerHTML= parseInt(gmailPrice2021*gmail2021Quantity);

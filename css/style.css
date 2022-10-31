@@ -7,7 +7,8 @@ body {
 .header {
   display: grid;
   grid-template-columns: 1fr 9fr;
-  background: black;
+  width: 100%;
+  position: fixed;
 }
 
 /* header left */
@@ -16,67 +17,174 @@ body {
   justify-content: center;
   align-items: center;
 }
-.header-left img {
-  height: 60%;
+.header-left > img {
+  width: 50%;
 }
 /* header right */
 .header-right {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
 }
 .menu ul {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 3fr 3fr 4fr 3fr 3fr;
+  justify-content: center;
+  align-items: center;
 }
 .menu ul li {
-  display: inline-block;
-  padding: 5px;
-  background: rgb(0, 0, 0);
-  border-radius: 3px;
-}
-.menu ul li a {
+  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  height: 35px;
-  width: 120px;
+  margin: 0px 1px;
+}
+.menu > ul > li > a {
   text-decoration: none;
-  font-size: 150%;
   color: white;
-  border: 2px solid #8f8d89;
-  border-radius: 3px;
+  font-size: 150%;
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 2px solid #a19277;
+  background: rgb(26 25 25);
 }
 #contact-us {
-  width: 150px;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  align-items: center;
 }
 
 /*--------------
      body css 
 ---------------*/
-
+#main-content {
+  padding-top: 100px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .content {
   display: grid;
-  grid-template-columns: 4fr 3fr 6fr 4fr 2fr;
-  align-items: center;
-  justify-content: end;
-  background: rgb(26 25 25);
+  grid-template-columns: 5fr 5fr 4fr 3fr 2fr;
+  grid-gap: 1px;
   color: white;
-  margin: 15px 2px 15px 2px;
+  margin-top: 10px;
   border: 2px solid #a19277;
   border-radius: 5px;
+  width: 85%;
 }
-.content h1,
-p {
+.content h1 {
+  font-size: 150%;
+}
+.content p {
+  font-size: 70%;
+}
+.gmail-description {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
+  text-align: center;
+  justify-content: center;
   align-items: center;
-  padding: 0px 10px;
+}
+.content-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content > *,
+.content-item > * {
   background: rgb(26 25 25);
 }
 
+.quantity {
+  background: rgb(26 25 25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quantity-heading {
+  margin: 0px;
+}
+.select-gmail-quantity {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.minus {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  text-align: center;
+  background: rgb(26 25 25);
+  border: 2px solid white;
+
+  cursor: pointer;
+  user-select: none;
+  /* -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; */
+}
+.gmail-quantity {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: white;
+  color: black;
+  text-align: center;
+  align-items: center;
+  font-size: 200%;
+  font-weight: 900;
+
+  user-select: none;
+  /* -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; */
+}
+.plus {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  align-items: center;
+  background: rgb(26 25 25);
+  border: 2px solid white;
+
+  cursor: pointer;
+  user-select: none;
+  /* -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none; */
+}
+
+.price {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.price > h1 {
+  margin: 0px;
+}
+.dollar-sign {
+  display: grid;
+  justify-content: right;
+}
+.amount {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.add-to-cart {
+  background: #f57224;
+  color: #fff;
+  padding: 2% 4%;
+  border-radius: 3px;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 .buy a {
   text-decoration: none;
   background: red;
@@ -84,118 +192,79 @@ p {
   padding: 5px;
   border-radius: 10px;
 }
-.quantity {
-  background: rgb(26 25 25);
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-}
-.select-gmail-quantity {
-  border: 2px solid white;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background: rgb(26 25 25);
-}
-.select-gmail-quantity > span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.minus {
-  border: 1px dashed orange;
-  background: rgb(26 25 25);
-  font-size: 350%;
-  padding-bottom: 7px;
-  cursor: pointer;
-}
-.gmail-quantity {
-  background: white;
-  color: black;
-  font-size: 200%;
-  font-weight: 700;
-}
-.plus {
-  border: 1px dashed orange;
-  background: rgb(26 25 25);
-  font-size: 350%;
-  cursor: pointer;
-}
-.amount {
-  background: rgb(26 25 25);
-}
 
 /* responsive */
 /* small device */
 
-@media screen and (max-width: 896px) {
+/* large device 1024pixel */
+@media screen and (max-width: 1024px) {
   .header {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .header-left {
-    display: none;
-  }
-  .menu ul {
-    padding: 0px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .menu ul li {
-    font-size: 70%;
     display: flex;
-    justify-content: left;
-    background: none;
+    flex-direction: column;
   }
-
-  .menu ul li a {
+  .header-left > img {
+    height: 40px;
+  }
+  .header-right {
+    font-size: 11px;
+  }
+  .menu > ul {
+    margin: 0px;
     padding: 0px;
-    display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    height: 30px;
-    width: 125px;
-    background: black;
-    border: 2px solid #8f8d89;
-    border-radius: 3px;
   }
-  /* ---------------------------
-  container responsive css
-  ------------------------------- */
+  #main-content {
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 85%;
+  }
   .content {
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr 2fr;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 45%;
+  }
+  .price {
+    display: flex;
+    flex-direction: row;
+  }
+  .header-left > img {
+    width: 100%;
+  }
+  .menu > ul > li > a {
+    font-size: 170%;
   }
   .content h1,
-  p {
-    justify-content: left;
+  .gmail-quantity {
     font-size: 130%;
   }
-  .gmail-description {
-    display: none;
+  /* #long-title {
+    font-size: 80%;
+  } */
+  .content p {
+    font-size: 80%;
   }
 }
-/* small device */
 
+/* mobile phone  */
 @media screen and (max-width: 640px) {
-  .menu ul {
-    grid-template-columns: 1fr 1fr;
+  .menu > ul > li > a {
+    font-size: 80%;
+  }
+}
+@media screen and (max-width: 280px) {
+  .menu > ul > li > a {
+    font-size: 40%;
   }
   #contact-us {
-    width: 125px;
-  }
-  /* ---------------------------
-  container responsive css
-  ------------------------------- */
-  .content {
-    display: grid;
-    grid-template-columns: 4fr 4fr 4fr 2fr;
-  }
-  .content h1,
-  p {
-    justify-content: left;
-    font-size: 100%;
-  }
-  .gmail-description {
-    display: none;
+    font-size: 50%;
   }
 }
